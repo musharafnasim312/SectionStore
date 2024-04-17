@@ -3,7 +3,7 @@
 client_id = "5d1c9a40a4b29117223d09fd162d789f"
 name = "section-store"
 handle = "section-store-5"
-application_url = "https://velvet-automatic-foot-protocol.trycloudflare.com"
+application_url = "https://gr-yard-see-duty.trycloudflare.com"
 embedded = true
 
 [build]
@@ -17,9 +17,9 @@ scopes = "write_products"
 
 [auth]
 redirect_urls = [
-  "https://velvet-automatic-foot-protocol.trycloudflare.com/auth/callback",
-  "https://velvet-automatic-foot-protocol.trycloudflare.com/auth/shopify/callback",
-  "https://velvet-automatic-foot-protocol.trycloudflare.com/api/auth/callback"
+  "https://gr-yard-see-duty.trycloudflare.com/auth/callback",
+  "https://gr-yard-see-duty.trycloudflare.com/auth/shopify/callback",
+  "https://gr-yard-see-duty.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]

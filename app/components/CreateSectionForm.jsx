@@ -1,9 +1,9 @@
 import {FormLayout, TextField} from '@shopify/polaris';
 import React,{useState} from 'react';
 
-export default function CreateSectionForm() {
-  const [title,setTitle] = useState("");
-  const [description,setDescription] = useState("");
+export default function CreateSectionForm({item}) {
+  const [title,setTitle] = useState(item?.title || " ");  //check if item exists
+  const [description,setDescription] = useState(item?.description || ""); //check if item exists
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -13,11 +13,15 @@ export default function CreateSectionForm() {
       formData.append("title", title);
       formData.append("description", description);
 
+      if(item?.id){
+        formData.append("id",item.id)
+      }  
+
       const res = await fetch ("/app/additional", {
         method: "POST",
         body:formData
     })
-    console.log(res);
+    console.log(res)
   }
     catch(error){
       console.log(error);
